@@ -1,0 +1,175 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+:root{
+    --Paars: #5722CD;
+    --Blauw: #4845E4;
+    --Roze: #ED4385;
+    /*voor standaard tekst*/
+    --Zwart: #0C0C0C;
+    /*voor de grote zwevende woorden, zoals "hello" en "services"*/
+    --Lichtpaars: #F2F0FF;
+    /*Uitzonderingen:*/
+    /*voor de achtergrond van de projecten*/
+    --Lichtgrijs: #F3F6F9;
+    /*voor de service-tegel tekst*/
+    --Grijs: #7A7A7A;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: var(--Zwart);
+}
+
+/*@media (min-width: 40rem) {*/
+/*    html { font-size: 112%; }*/
+/*}*/
+
+/*@media (min-width: 64rem) {*/
+/*    html { font-size: 120%; }*/
+/*}*/
+
+/*body {*/
+/*    background-color: #FAFAFA;*/
+/*    color: #333333;*/
+/*}*/
+
+.container{
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 90%;
+    max-height: 100%;
+    /*border: 1px solid red;*/
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+/*Mobile*/
+h1, h2, h3, h4, h5 {
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    /*margin: 0;*/
+}
+
+h1 {
+    font-size: 2.25rem;
+    /*margin-bottom: 1.5rem;*/
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.313rem;
+    margin-bottom: .5rem;
+}
+
+/*Desktop*/
+/*@media (min-width: 40rem) {*/
+/*    h1 { font-size: 2.5rem; }*/
+/*    h2 { font-size: 1.75rem; }*/
+/*    h3 { font-size: 1.5rem; }*/
+/*}*/
+
+p{
+    max-width: 30rem; /* for better readability */
+}
+
+a{
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--Lichtgrijs);
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.primary-bttn{
+    height: 50px;
+    width: 200px;
+    background-color: var(--Roze);
+    color: var(--Lichtgrijs);
+    border-radius: 25px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    box-shadow: 0 9px 40px -4px rgba(0,0,0,0.4);
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+nav{
+    color: var(--Lichtgrijs);
+    background-color: var(--Paars);
+}
+
+nav, .nav-items{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    color: var(--Lichtgrijs);
+}
+
+header{
+    height: 80vh;
+
+    color: var(--Lichtgrijs);
+    background-color: var(--Paars);
+}
+
+.header-copy{
+    height: calc(100% - 160px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.header-icon{
+    display: flex;
+    justify-content: center;
+}
+
+.header-wave{
+    height: 60px;
+    width: 60px;
+
+    background-image: url("/src/assets/squiggle_line_stripe.svg");
+    background-size: cover;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
