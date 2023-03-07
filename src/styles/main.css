@@ -69,12 +69,12 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: 2.25rem;
-    /*margin-bottom: 1.5rem;*/
 }
 
 h2 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+    line-height: 2rem;
 }
 
 h3 {
@@ -121,25 +121,26 @@ a{
     box-shadow: 0 9px 40px -4px rgba(0,0,0,0.4);
 }
 
+.secondary-bttn{
+    color: var(--Paars);
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
 /* --------------- 3.2 Other --------------------------- */
+
+.icon-wave{
+    min-height: 0.3em;
+    max-width: 3em;
+    background-image: url("/src/assets/squiggle_line.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
-nav{
-    color: var(--Lichtgrijs);
-    background-color: var(--Paars);
-}
-
-nav, .nav-items{
-    height: 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-
-    color: var(--Lichtgrijs);
-}
 
 header{
     height: 80vh;
@@ -148,8 +149,21 @@ header{
     background-color: var(--Paars);
 }
 
+nav .nav-items{
+    height: 100px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    color: var(--Lichtgrijs);
+    background-color: var(--Paars);
+}
+
 .header-copy{
-    height: calc(100% - 160px);
+    height: calc(100% - 200px);
+    min-width: 50%;
 
     display: flex;
     flex-direction: column;
@@ -160,16 +174,177 @@ header{
 }
 
 .header-icon{
+    height: 100px;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
-.header-wave{
-    height: 60px;
-    width: 60px;
+.icon-wave-stroke{
+    height: 70px;
+    width: 70px;
 
     background-image: url("/src/assets/squiggle_line_stripe.svg");
     background-size: cover;
 }
 
-/* --------------- 4.2 Introduction ------------------- */
+/*//////////// MAIN SECTIONS ////////////*/
+
+/*//////////// Introduction ////////////*/
+
+.introduction{
+    min-height: 80vh;
+    max-width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: var(--Paars);
+}
+
+.introduction p{
+    color: var(--Zwart);
+    justify-content: center;
+}
+
+.introduction a{
+    color: var(--Paars);
+}
+
+/*//////////// Cases ////////////*/
+
+.cases{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 100px 50px;
+    background-color: var(--Lichtgrijs);
+}
+
+.case{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.case .text-frame{
+    width: 40%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.case p{
+    max-width: 300px;
+}
+
+.case img{
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: end;
+        box-shadow: 0 9px 40px -4px rgba(0,0,0,0.4);
+}
+
+.align-right{
+    order: 2;
+}
+
+/*//////////// SERVICES ////////////*/
+
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 65px 75px;
+}
+
+.cards-grid{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 32px;
+}
+
+.card{
+    height: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 30px;
+    border: 1px solid var(--Paars);
+    box-shadow: 0 9px 40px -4px rgba(0,0,0,0.08);
+    color: var(--Grijs);
+}
+
+.card img{
+    height: 60px;
+    width: 60px;
+}
+
+.card h2{
+    color: var(--Paars);
+}
+
+/*//////////// FOOTER ////////////*/
+
+footer section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Paars);
+    color: var(--Lichtgrijs);
+}
+
+footer h2{
+    font-size: 3rem;
+}
+
+form{
+    border: 1px solid red;
+    width: 800px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+input{
+    padding: 10px;
+}
+
+.name[type=text] {
+    width: 100%;
+    height: 40px;
+}
+
+.email[type=email] {
+    width: 100%;
+    height: 40px;
+}
+
+
+footer .copyrights{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Zwart);
+    color: var(--Lichtgrijs);
+}
+
+
+
+
+
+
+
