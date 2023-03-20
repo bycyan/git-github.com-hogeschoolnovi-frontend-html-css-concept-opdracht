@@ -1,0 +1,135 @@
+@media (min-width: 1000px){
+
+    /* --------------- 3.1 Reusables ----------------------- */
+    .primary-bttn{
+        height: 60px;
+        width: 250px
+    }
+
+    .secondary-bttn{
+        font-size: 1rem;
+    }
+
+    /*.container-inner{*/
+    /*    width: 83rem;*/
+    /*}*/
+
+    /* --------------- 4.1 Header ------------------------- */
+
+    header{
+        height: 93vh;
+    }
+
+    .navbar-container{
+        justify-content: flex-end;
+    }
+
+    nav .nav-items{
+        height: 80px;
+
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    nav a{
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--Lichtgrijs);
+    }
+
+    .header-copy{
+        width: 850px;
+    }
+
+    .header-copy p{
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+    }
+
+    .header-icon{
+        height: 100px;
+    }
+
+    .icon-wave-stroke{
+        height: 100px;
+        width: 100px;
+    }
+
+    /*//////////// INTRO ////////////*/
+    .introduction-container{
+        height: 90vh;
+        width: 900px;
+    }
+
+    /*//////////// CASES ////////////*/
+    .case-container{
+        width: 93%;
+        flex-direction: row;
+        align-items: center;
+        /*gap: 135px*/
+    }
+
+    .case-container .text-frame{
+        margin-top: -100px;
+        margin-left: 75px;
+    }
+
+    .case-container p{
+        font-size: 1.3rem;
+        max-width: 380px;
+        margin: 50px 0;
+    }
+
+    .align-right{
+        order: 2;
+    }
+
+    .case-container .align-right{
+        background-color: #7A7A7A;
+    }
+
+    /*//////////// SERVICES ////////////*/
+
+    .services-container{
+        height: 100vh;
+        margin: 140px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card{
+        height: 250px;
+        flex-grow: 1;
+        padding: 40px;
+    }
+
+    .card h3{
+        font-size: 1.3rem;
+    }
+
+    .card p{
+        font-size: 1rem;
+    }
+
+    /*//////////// FOOTER ////////////*/
+
+    footer h2{
+        font-size: 2.7rem;
+    }
+
+    form{
+        width: 60%;
+    }
+
+    .form-inner input{
+        height: 35px;
+    }
+    .form-inner textarea{
+        height: 200px;
+    }
+
+}
