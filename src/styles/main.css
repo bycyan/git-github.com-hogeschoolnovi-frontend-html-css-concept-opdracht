@@ -29,58 +29,25 @@
     --Grijs: #7A7A7A;
 }
 
-.ref-img{
-    height: 640vh;
-    width: 100vw;
-    background-image: url("/src/assets/screenshots/basic/basic-desktop.png");
-    /*background-image: url("/src/assets/screenshots/basic/basic-mobiel.png");*/
-    background-size: 100%;
-    background-blend-mode: multiply;
-    position: absolute;
-    opacity: 10%;
-}
-
 html {
     font-family: 'Roboto', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    /*color: var(--Zwart);*/
+    color: var(--Zwart);
 }
-
-/*@media (min-width: 40rem) {*/
-/*    html { font-size: 112%; }*/
-/*}*/
-
-/*@media (min-width: 64rem) {*/
-/*    html { font-size: 120%; }*/
-/*}*/
-
-/*body {*/
-/*    background-color: #FAFAFA;*/
-/*    color: #333333;*/
-/*}*/
 
 .container-outer{
     width: 100%;
     min-height: 100%;
     display: flex;
-
-    /*border: 3px solid green;*/
 }
 
 .container-inner{
     width: 90%;
     margin: 0 auto;
     display: flex;
-
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
-
-/*@media (min-width: 1500px){*/
-/*    .container-inner{*/
-/*        width: 83rem;*/
-/*    }*/
-/*}*/
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
@@ -168,6 +135,28 @@ a{
     text-transform: uppercase;
 }
 
+.background-text, h4{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.white{
+    color: white;
+}
+
+.purple{
+    color: var(--Lichtpaars);
+    margin-top: 50px;
+}
+.purple-serv{
+    color: var(--Lichtpaars);
+    z-index: -1000;
+}
+
 /* --------------- 4.1 Header ------------------------- */
 
 header{
@@ -233,6 +222,7 @@ nav a{
 /*//////////// INTRO ////////////*/
 
 .introduction-container{
+    z-index: 1000;
     height: 50vh;
     flex-direction: column;
     justify-content: center;
@@ -255,6 +245,7 @@ nav a{
 }
 
 .case-container{
+    z-index: 1000;
     flex-direction: column;
     gap: 35px;
 }
@@ -300,6 +291,7 @@ nav a{
 
 .card p{
     font-size: 13px;
+    color: var(--Grijs);
 }
 
 .card img{
@@ -313,65 +305,69 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /*height: 90vh;*/
     background-color: var(--Paars);
     color: var(--Lichtgrijs);
 }
 
 .footer-container{
+    width: 90%;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 95px 0;
+    padding: 95px 0;
 }
 
 footer h2{
     font-size: 26px;
+    text-align: center;
 }
 
 footer p{
     margin-bottom: 45px;
+    text-align: center;
 }
 
-/*input, textarea {*/
-/*    outline: none;*/
-/*}*/
-
 form {
-    width: 340px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .form-inner {
-    width: 100%;
-    position: inherit;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
+
 .form-inner input,
 .form-inner textarea {
+    font-family: 'Roboto', sans-serif;
     display: block;
-    flex-shrink: 0;
     width: 100%;
-    padding: 12px;
+    max-width: 100%;
+    flex-shrink: 0;
     margin-bottom: 30px;
+    padding-left: 20px;
     border: none;
     border-radius: 2px;
     background: var(--Lichtgrijs);
 }
-.form-inner textarea {
-    height: 150px;
-    /*resize: none;*/
+.form-inner input{
+    height: 50px;
 }
 
-.form-button{
-    display: flex;
-    justify-content: center;
+.form-inner textarea{
+    padding-top: 20px;
 }
+
+.form-inner label{
+    align-self: start;
+}
+
+
 
 button {
     height: 50px;

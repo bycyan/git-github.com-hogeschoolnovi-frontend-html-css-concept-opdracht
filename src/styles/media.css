@@ -7,12 +7,30 @@
     }
 
     .secondary-bttn{
+        display: flex;
+        align-items: center;
+        gap: 20px;
         font-size: 1rem;
     }
 
-    /*.container-inner{*/
-    /*    width: 83rem;*/
-    /*}*/
+    .moving-div{
+        background-color: #5722CD;
+        height: 2px;
+        width: 15px;
+        transition: 1s;
+    }
+
+    .secondary-bttn:hover > .moving-div{
+        width: 50px;
+    }
+
+    .background-text h4{
+        font-size: 20rem;
+    }
+
+    .white{
+        transform: translateY(-150px);
+    }
 
     /* --------------- 4.1 Header ------------------------- */
 
@@ -121,15 +139,7 @@
         font-size: 2.7rem;
     }
 
-    form{
-        width: 60%;
+    .form-inner{
+        width: 800px;
     }
-
-    .form-inner input{
-        height: 35px;
-    }
-    .form-inner textarea{
-        height: 200px;
-    }
-
 }
