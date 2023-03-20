@@ -1,0 +1,403 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+:root{
+    --Paars: #5722CD;
+    --Blauw: #4845E4;
+    --Roze: #ED4385;
+    /*voor standaard tekst*/
+    --Zwart: #0C0C0C;
+    /*voor de grote zwevende woorden, zoals "hello" en "services"*/
+    --Lichtpaars: #F2F0FF;
+    /*Uitzonderingen:*/
+    /*voor de achtergrond van de projecten*/
+    --Lichtgrijs: #F3F6F9;
+    /*voor de service-tegel tekst*/
+    --Grijs: #7A7A7A;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: var(--Zwart);
+}
+
+.container-outer{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+
+.container-inner{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid red;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+/*Mobile*/
+h1, h2, h3, h4, h5 {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 15px;
+    max-width: 30rem; /* for better readability */
+}
+
+a{
+    margin: 0;
+    text-decoration: none;
+    color: var(--Paars);
+}
+
+@media (min-width: 1000px){
+    h1 {
+        font-size: 2.7rem;
+        line-height: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.primary-bttn{
+    height: 50px;
+    width: 200px;
+    background-color: var(--Roze);
+    color: var(--Lichtgrijs);
+    border-radius: 50px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+    box-shadow: 0 9px 40px -4px rgba(0,0,0,0.4);
+}
+
+
+
+.secondary-bttn{
+    color: var(--Paars);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.background-text, h4{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.white{
+    color: white;
+}
+
+.purple{
+    color: var(--Lichtpaars);
+    margin-top: 50px;
+}
+.purple-serv{
+    color: var(--Lichtpaars);
+    z-index: -1000;
+}
+
+/* --------------- 4.1 Header ------------------------- */
+
+header{
+    height: 66vh;
+    width: 100vw;
+    color: var(--Lichtgrijs);
+}
+
+
+.header-container{
+    background-color: var(--Paars);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.navbar-container{
+    justify-content: center;
+}
+
+nav .nav-items{
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+nav a{
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--Lichtgrijs);
+}
+
+.header-copy{
+    margin-top: -50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-copy p{
+    font-size: 21px;
+}
+
+.header-icon{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.icon-wave-stroke{
+    height: 75px;
+    width: 75px;
+
+    background-image: url("/src/assets/squiggle_line_stripe.svg");
+    background-size: cover;
+}
+
+/*//////////// MAIN SECTIONS ////////////*/
+/*//////////// INTRO ////////////*/
+
+.introduction-container{
+    z-index: 1000;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.introduction-container h3{
+    color: var(--Paars);
+    margin: 35px 0;
+}
+
+/*//////////// CASES ////////////*/
+.cases-container{
+    padding: 90px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--Lichtgrijs);
+    gap: 45px;
+}
+
+.case-container{
+    z-index: 1000;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.case-container img{
+    width: 100%;
+    box-shadow: 0 9px 40px -4px rgba(0,0,0,0.4);
+}
+
+.case-container p{
+    margin-bottom: 35px;
+}
+
+.icon-wave{
+    height: 5px;
+    width: 50px;
+    margin: 35px 0;
+    background-image: url("/src/assets/squiggle_line.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*//////////// SERVICES ////////////*/
+
+.services-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
+.card{
+    height: 225px;
+    width: 240px;
+    /*flex-direction: column;*/
+    /*justify-content: start;*/
+    padding: 20px;
+    border: 1px solid var(--Paars);
+    box-shadow: 0 9px 40px -4px rgba(0,0,0,0.4);
+    /*color: var(--Grijs);*/
+}
+
+.card p{
+    font-size: 13px;
+    color: var(--Grijs);
+}
+
+.card img{
+    height: 60px;
+    width: 60px;
+}
+
+/*//////////// FOOTER ////////////*/
+
+footer{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Paars);
+    color: var(--Lichtgrijs);
+}
+
+.footer-container{
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 95px 0;
+}
+
+footer h2{
+    font-size: 26px;
+    text-align: center;
+}
+
+footer p{
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-inner {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-inner input,
+.form-inner textarea {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 2px;
+    background: var(--Lichtgrijs);
+}
+.form-inner input{
+    height: 50px;
+}
+
+.form-inner textarea{
+    padding-top: 20px;
+}
+
+.form-inner label{
+    align-self: start;
+}
+
+
+
+button {
+    height: 50px;
+    width: 150px;
+    background-color: var(--Roze);
+    color: var(--Lichtgrijs);
+    border-radius: 25px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+    box-shadow: 0 9px 40px -4px rgba(0,0,0,0.4);
+}
+
+.copyrights{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Zwart);
+    color: var(--Lichtgrijs);
+}
+
+
+
+
+
+
+
